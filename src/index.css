@@ -1,13 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  background-color: rgb(234, 237, 237);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Header section */
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo {
+  width: 100px;
+  object-fit: contain;
+  margin: 0 20px;
+  margin-top: 18px;
+}
+
+.header-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+}
+
+.header-searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  width: 100%;
+}
+
+.header-searchIcon {
+  padding: 5px;
+  height: 22px !important;
+  background-color: #cd9042;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header-option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+.header-optionOne {
+  font-size: 10px;
+}
+.header-optionTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.header-basketOption {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.header-basketCount {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Home section */
+
+.home {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: auto;
+  justify-content: center;
+  max-width: 1500px;
+}
+
+.home-row {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: 1;
+}
+
+.home-image {
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* Product section */
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-height: 400px;
+  min-width: 100px;
+  background-color: white;
+  z-index: 1;
+}
+
+.product > button {
+  background: #f0c14b;
+  border: 1px solid;
+  margin: 10px;
+  color: #111;
+  border-color: #a99734 #9c7e31 #846a29;
+}
+
+.product > button:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product > img {
+  height: 200px;
+  width: 260px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-info {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  margin-top: 5px;
+}
+
+.product-rating{
+  display: flex;
+}
+
+/* Checkout Page  */
+.checkout{
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+}
+
+.checkout-ad{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.checkout-title{
+  margin-right: 10px;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.subtotal{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+.subtotal-gift{
+  display: flex;
+  align-items: center;
+}
+
+.subtotal-gift > input{
+  margin-right: 5px;
+}
+
+.subtotal > button{
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+.subtotal > button:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Checkout Product Section  */
+
+.checkoutProduct{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.checkoutProduct-info{
+  padding-left: 20px;
+}
+
+.checkoutProduct-info > button{
+  background: #f0c14b;
+  border-radius: 2px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+.checkoutProduct-info > button:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.checkoutProduct-image{
+  object-fit: contain;
+  width: 180px ;
+  height: 180px;
+}
+
+.checkoutProduct-rating{
+  display: flex;
+}
+
+
+/* Login Page  */
+.login {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-logo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  object-fit: contain;
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.login-container {
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 20px;
+}
+
+.login-container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.login-container > form > h5 {
+  margin-bottom: 5px;
+}
+
+.login-container > form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
+
+.login-container > p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.newUser{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 15px;
+  color: gray;
+}
+
+.login-signInButton {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+.login-signInButton:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-registerButton {
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 15px;
+  border-color: darkgray;
+}
+.login-registerButton:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Payment Page  */
+.payment{
+  background-color: white;
+}
+
+.payment-container > h1{
+  text-align: center;
+  padding: 10px;
+  font-weight: 400;
+  background-color: rgb(234, 237, 237);
+  border-bottom: 1px solid lightgray;
+}
+.payment-container > h1 a{
+  text-decoration: none;
+}
+
+.payment-section{
+  display: flex;
+  padding: 20px;
+  margin: 0 20px;
+  border-bottom: 1px solid lightgray;
+}
+
+.payment-title{
+  flex: 0.2;
+}
+
+.payment-method{
+  flex: 0.2;
+}
+
+.payment-address{
+  flex: 0.8;
+}
+
+.payment-details{
+  flex: 0.5;
+}
+
+.payment-items{
+  flex: 0.80;
+}
+.payment-details > form {
+  max-width: 400px;
+}
+
+.payment-details > h3 {
+  padding-bottom: 20px;
+}
+.payment-priceDetails > h3 {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.payment-details > form > div > button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  font-weight: bolder;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+}
+.payment-details > form > div > button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Order Section  */
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  border: 1px solid lightgray;
+  background-color: white;
+  position: relative;
+}
+
+.order-id {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.order-total {
+  font-weight: 500;
+  text-align: right;
+}
+
+.orders {
+  padding: 20px 80px;
+}
+
+.orders > h1 {
+  margin: 30px 0;
+}
+
+/* Shipping Address  */
+
+.shipping {
+  background-color: white;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shipping-container {
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.shipping-container > h1 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.shipping-container > form > h5 {
+  margin-bottom: 5px;
+}
+
+.shipping-container > form > input {
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
+
+.shipping-container > p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  text-align: justify;
+}
+
+.shipping-button {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 20px;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+.shipping-button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
